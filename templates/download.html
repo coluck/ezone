@@ -7,14 +7,31 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
     <title>Upload - ezone</title>
+    <style>
+    .content {
+       max-width: 500px;
+       margin: auto;
+      color: #456268;
+    }
+    body {
+      background-color: #edffea;
+    }
+    hr {
+      background-color: #456268;
+      border-style: none;
+      height: 2px;
+      width: 500px;
+    }
+    </style>
 </head>
 <body>
-<div class="hero-body">
+<div class="">
+  <h1 class="content">Enter file name to Download</h1>
     <div class="container">
 
     {% for file in files %}
     <article class="post">
-        <div>
+        <div class="content">
           <p>{{ file }}</p>
         </div>
     </article>
@@ -24,11 +41,10 @@
     {% endfor %}
         <br>
         <br>
-          <h1>Enter file name to Download</h1>
 
-          <form method="post">
+          <form method="post" class="content">
         <input type="text" name="filename" id="filename">
-        <input type="submit" value="Upload">
+        <input type="submit" value="Download">
     </form>
 
 </body>
