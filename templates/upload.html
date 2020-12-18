@@ -5,10 +5,12 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <title>Upload - ezone</title>
 </head>
 <body>
-    <h1>Enter file name to upload</h1>
+<div class="hero-body">
+    <div class="container">
 
     {% for file in files %}
     <article class="post">
@@ -20,9 +22,14 @@
           <hr>
         {% endif %}
     {% endfor %}
-    <form method="post">
+        <br>
+        <br>
+          <h1>Enter file name to upload</h1>
+
+          <form method="post">
         <input type="text" name="filename" id="filename">
-        <input type="submit" value="Upload"
+        <input type="submit" value="Upload">
     </form>
+
 </body>
 </html>
